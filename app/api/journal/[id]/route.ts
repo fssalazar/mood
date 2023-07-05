@@ -26,6 +26,7 @@ export const PATCH = async (request: Request, { params }) => {
       entryId: updatedEntry.id,
     },
     create: {
+      userId: user.id,
       entryId: updatedEntry.id,
       ...analysis,
     },
@@ -34,3 +35,5 @@ export const PATCH = async (request: Request, { params }) => {
 
   return NextResponse.json({ data: { ...updatedEntry, analysis: updated } })
 }
+
+//33min
