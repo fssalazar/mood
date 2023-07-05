@@ -13,8 +13,6 @@ export const POST = async () => {
     },
   })
 
-  console.log(entry)
-
   const analysis = await analyze(entry.content)
   await prisma.analysis.create({
     data: {
@@ -23,7 +21,6 @@ export const POST = async () => {
       ...analysis,
     },
   })
-  console.log(entry)
 
   revalidatePath('/journal')
 

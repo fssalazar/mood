@@ -21,7 +21,6 @@ const getDate = async () => {
 
 export default async function History() {
   const { analyses, avg } = await getDate()
-  console.log(analyses, avg)
   return (
     <div className="w-full h-full">
       <div>{`Avg. Sentiment ${avg}`}</div>

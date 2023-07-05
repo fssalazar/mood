@@ -57,7 +57,7 @@ export const analyze = async (content) => {
   try {
     return parser.parse(output)
   } catch (error) {
-    console.log(e)
+    console.error(e)
   }
 }
 
